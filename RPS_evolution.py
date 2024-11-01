@@ -24,19 +24,16 @@ def round(p1,p2):
         if p2 == 1:
             return "player2"
         else:
-            p2 == 2
             return "player1"
     elif p1 == 1:
         if p2 == 2:
             return "player2"
         else:
-            p2 == 0
             return "player1"
     elif p1 == 2:
         if p2 == 0:
             return "player2"
         else:
-            p2 == 1
             return "player1"
 
 # Modifying The Counters
