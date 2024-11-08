@@ -22,7 +22,7 @@ def results(p1, p2):
         return "Player2"
 
 # Getting the score
-while step < 1000:
+while step < 10000:
     player1_move = random.choice(moves)
     player2_move = random.choice(moves)
     if results(player1_move, player2_move) == "Player1":
