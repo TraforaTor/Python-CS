@@ -1,42 +1,33 @@
-import itertools
+#computer_science_peer_review_5
+import random
+random_integer_list = []
+numbers_in_even_places = []
+even_numbers = []
 
-def evaluate_expression(expr, values):
-    # Replace variable names with their truth values
-    for var, val in values.items():
-        expr = expr.replace(var, str(val))
-    
-    # Replace logical operators with Python's logical operators
-    expr = expr.replace('+', ' and ')
-    expr = expr.replace('*', ' or ')
-    expr = expr.replace('!', ' not ')
-    
-    try:
-        # Evaluate the expression
-        return eval(expr)
-    except Exception as e:
-        print(f"Error evaluating expression: {e}")
-        return None
 
-def truth_table(expr):
-    # Identify unique variables in the expression
-    variables = sorted(set(filter(str.isalpha, expr)))
-    
-    # Generate all combinations of truth values for the variables
-    combinations = list(itertools.product([False, True], repeat=len(variables)))
-    
-    # Print the header of the truth table
-    header = " | ".join(variables) + " | Result"
-    print(header)
-    print("-" * len(header))
-    
-    # Evaluate the expression for each combination and print the results
-    for combo in combinations:
-        values = dict(zip(variables, combo))
-        result = evaluate_expression(expr, values)
-        row = " | ".join(str(int(values[var])) for var in variables) + " | " + str(int(result))
-        print(row)
+#LET'S INITIALIZE THE PROGRAMME AND CREATE A LIST
+i = 0
+while i <= 9: #why 9, counting from 0 to 9 equals to 10 character
+    random_number = random.randint(0, 100)
+    random_integer_list.append(random_number)
+    i += 1
 
-# Example usage
-if __name__ == "__main__":
-    expression = "(!x+y)*z+(!z*y*k)"  # Change the expression here
-    truth_table(expression)
+print(f"A random list has been created, your numbers are: {random_integer_list}")
+
+#STEP I: FINDING NUMBERS AT EVEN INDEXES
+for index in range(len(random_integer_list)):
+    if index % 2 == 0:
+        numbers_in_even_places.append(random_integer_list[index])
+print(f"Numbers in even places are as follows: {numbers_in_even_places}")
+
+#STEP II: FINDING THE EVEN NUMBERS IN THE LIST
+for num in random_integer_list:
+    if num % 2 == 0:
+        even_numbers.append(num)
+print(f"Even numbers are as follows: {even_numbers}")
+
+#STEP III: SORTING THE LIST IN REVERSE
+print(f"The original list in reverse is as follows: {random_integer_list[::-1]}")
+
+#STEP IV: FINDING THE FIRST AND THE LAST ITEM OF THE LIST
+print(f"The first item of the list is {random_integer_list[0]} and the last item is {random_integer_list[-1]}")
