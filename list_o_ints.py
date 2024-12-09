@@ -38,7 +38,7 @@ def finding_evens(original_list):
 def finding_double(original_list):
     list_of_double = original_list.copy()
     for m in original_list:
-        if m < 9 or m > 100:
+        if m <= 9 or m >= 100:
             list_of_double.remove(m)
     return list_of_double
 
