@@ -13,14 +13,11 @@ def turn_string_to_list(names):
 def find_word(file_list, to_find):
     for i in file_list:
         lines_of_file = read_file(i)
-        entire_line = search_for_word(lines_of_file, to_find)
-        print(i,":",entire_line)
-
-def search_for_word(lines_to_search, word_to_search):
-    for i in lines_to_search:
-        temporary_i = i.lower()
-        if word_to_search in temporary_i:
-            return i
+        for j in lines_of_file:
+            entire_line = j
+            temporary_j = j.lower()
+            if to_find in temporary_j:
+                print(f"{i}: {entire_line}")
 
 def read_file(file_name):
     DIR = "Find_ring/"
