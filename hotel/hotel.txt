@@ -1,0 +1,7 @@
+Milano Porta Nuova:MIPN160:6:120.00
+Taormina:T0123:12:180.00
+Barcelona:BRC13:13:80.00
+Amsterdam Doelen:DEOL1:15:60.00
+Madrid Suecia:SUE33:10:110.00
+Eindhoven:EIND:18:55.00
+Madrid Palacio:PALAC:12:105.00
